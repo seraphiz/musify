@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.select :user_id, @users_for_select, id: :id_formulario, prompt: "Seleccione un usuario" %>
+    <%#= User.all.collect{|x| [x.name, x.id]} %>
   </div>
 
   <div class="actions">
