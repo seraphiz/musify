@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
   resources :users
-    resources :playlists
+  
+  resources :playlists do
+    resources :songs
+  end 
 
 
 root 'users#index'

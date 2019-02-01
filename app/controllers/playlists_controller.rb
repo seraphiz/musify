@@ -10,6 +10,8 @@ class PlaylistsController < ApplicationController
   # GET /playlists/1
   # GET /playlists/1.json
   def show
+    @song = Song.new
+    @musicas_para_iterar = Song.where(playlist_id: @playlist.id)
   end
 
   # GET /playlists/new
