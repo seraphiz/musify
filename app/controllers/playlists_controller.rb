@@ -22,6 +22,7 @@ class PlaylistsController < ApplicationController
 
   # GET /playlists/1/edit
   def edit
+    @users_for_select = User.pluck(:name, :id)
   end
 
   # POST /playlists
